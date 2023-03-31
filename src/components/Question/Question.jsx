@@ -7,7 +7,7 @@ const Question = () => {
         <h1 className="text-3xl text-center mt-5 text-blue-400">
           4 Questions Answers is here:
         </h1>
-        <div className="mt-5 mb-5 bg-cyan-200 p-5 rounded-lg w-2/4 mx-auto">
+        <div className="mt-5 mb-5 bg-cyan-200 p-5 rounded-lg lg:w-2/4 mx-auto">
           <h1 className="text-2xl">Props vs state?</h1>
           <h2>Props and state they have different purpose </h2>
           <p>
@@ -23,7 +23,7 @@ const Question = () => {
             component.
           </p>
         </div>
-        <div className="mb-5 bg-cyan-200 p-5 rounded-lg w-2/4 mx-auto">
+        <div className="mb-5 bg-cyan-200 p-5 rounded-lg lg:w-2/4 mx-auto">
           <h1 className="text-2xl">How does useState work?</h1>
           <p>
             useState is a hook in React that allows functional components to
@@ -32,7 +32,7 @@ const Question = () => {
             function to update the state value.
           </p>
         </div>
-        <div className="mb-5 bg-cyan-200 p-5 rounded-lg w-2/4 mx-auto">
+        <div className="mb-5 bg-cyan-200 p-5 rounded-lg lg:w-2/4 mx-auto">
           <h1 className="text-2xl">
             Purpose of useEffect other than fetching data.
           </h1>
@@ -41,7 +41,7 @@ const Question = () => {
             data from an API, useEffect has several other use cases as well.
           </p>
         </div>
-        <div className="mb-5 bg-cyan-200 p-5 rounded-lg w-2/4 mx-auto">
+        <div className="mb-5 bg-cyan-200 p-5 rounded-lg lg:w-2/4 mx-auto">
           <h1 className="text-2xl">How Does React work?</h1>
           <p>
             React is a JavaScript library for building user interfaces. It uses
