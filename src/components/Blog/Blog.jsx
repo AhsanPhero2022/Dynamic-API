@@ -6,6 +6,7 @@ const Blog = () => {
   const [data, setData] = useState([]);
   const [title, setTile] = useState([]);
 
+  // console.log(title);
   useEffect(() => {
     fetch("blogData.json")
       .then((res) => res.json())
@@ -28,7 +29,9 @@ const Blog = () => {
           />
         ))}
       </div>
-      <Bookmarks title={title} />
+      <div>
+        <Bookmarks title={title} />
+      </div>
     </div>
   );
 };

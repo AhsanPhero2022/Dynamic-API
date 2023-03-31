@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookBookmark } from "@fortawesome/free-solid-svg-icons";
 
 const Cart = (props) => {
+  // console.log(props);
   const { blog_cover_img, blog_title, read_time, author_image, author_name } =
     props.blog;
   const handleAddToBlog = props.handleAddToBlog;
@@ -31,7 +32,7 @@ const Cart = (props) => {
             <div className="card-actions justify-end">
               <span>{read_time}</span>
               marks as read
-              <button onClick={() => handleAddToBlog(props.blog)}>
+              <button onClick={() => handleAddToBlog(props.blog_title)}>
                 <FontAwesomeIcon icon={faBookBookmark} />
               </button>
             </div>
