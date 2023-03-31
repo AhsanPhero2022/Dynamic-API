@@ -32,7 +32,7 @@ const Cart = (props) => {
             <div className="card-actions justify-end">
               <span>{read_time}</span>
               marks as read
-              <button onClick={() => handleAddToBlog(props.blog_title)}>
+              <button onClick={() => handleAddToBlog(props.blog)}>
                 <FontAwesomeIcon icon={faBookBookmark} />
               </button>
             </div>
