@@ -3,10 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBookBookmark } from "@fortawesome/free-solid-svg-icons";
 
 const Cart = (props) => {
-  // console.log(props);
   const { blog_cover_img, blog_title, read_time, author_image, author_name } =
     props.blog;
   const handleAddToBlog = props.handleAddToBlog;
+  const handleAddToTime = props.handleAddToTime;
 
   return (
     <div>
@@ -44,7 +44,12 @@ const Cart = (props) => {
             <p className="text-blue-500 ml-28 -mt-4">#programming</p>
           </div>
           <div>
-            <button className="text-blue-500 underline">Mark as read</button>
+            <button
+              onClick={() => handleAddToTime(props.blog)}
+              className="text-blue-500 underline"
+            >
+              Mark as read
+            </button>
           </div>
         </div>
       </div>

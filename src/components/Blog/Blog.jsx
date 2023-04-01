@@ -5,8 +5,8 @@ import Bookmarks from "../Bookmarks/Bookmarks";
 const Blog = () => {
   const [data, setData] = useState([]);
   const [title, setTile] = useState([]);
+  const [time, setTime] = useState([]);
 
-  // console.log(title);
   useEffect(() => {
     fetch("blogData.json")
       .then((res) => res.json())
@@ -18,18 +18,33 @@ const Blog = () => {
     setTile(newTile);
   };
 
+  const handleAddToTime = (blog) => {
+    const newTime = [...time, blog];
+    setTime(newTime);
+  };
+
+  let totatTime = 0;
+  for (let allTime of time) {
+    totatTime = totatTime + allTime.read_time;
+  }
+
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 ">
       <div className="col-span-2 mx-auto my-5">
         {data.map((singleBlog) => (
           <Cart
+            data={data}
             blog={singleBlog}
             key={singleBlog.id}
+            handleAddToTime={handleAddToTime}
             handleAddToBlog={handleAddToBlog}
           />
         ))}
       </div>
       <div>
+        <div className="bg-green-300 p-5 rounded-lg sticky top-20">
+          <h2>Total time count: {totatTime}</h2>
+        </div>
         <Bookmarks title={title} />
       </div>
     </div>
