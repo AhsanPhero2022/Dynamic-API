@@ -43,7 +43,7 @@ const Blog = () => {
       </div>
       <div>
         <div className="bg-green-300 p-5 rounded-lg sticky top-20">
-          <h2>Total time count: {totatTime}</h2>
+          <h2 className="font-semibold">Spent time on read: {totatTime}</h2>
         </div>
         <Bookmarks title={title} />
       </div>
